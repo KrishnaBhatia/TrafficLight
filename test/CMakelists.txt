@@ -1,0 +1,10 @@
+include_directories (${TrafficLights_Controller}/src)
+
+add_executable (Test test.cpp)
+
+target_link_libraries (Test TrafficController GTest::gtest_main)
+
+add_test (NAME UnitTest COMMAND Test)
+
+include(GoogleTest)
+gtest_discover_tests(Test)
