@@ -1,7 +1,0 @@
-# Library source file
-file(GLOB LIB_SOURCES *.cpp)
-file(GLOB LIB_HEADERS *.hpp )
-add_library (TrafficController ${LIB_SOURCES} ${LIB_HEADERS})
-
-add_executable (controller simulation.cpp)
-target_link_libraries (controller TrafficController)
